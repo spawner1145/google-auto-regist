@@ -39,7 +39,7 @@ for i in range(TimesToRun):
     
     driver.get("https://accounts.google.com/signup")
 
-    time.sleep(2)
+    time.sleep(1)
 
     # 姓名
     lastname = driver.find_element(By.XPATH, '//*[@id="lastName"]')
@@ -50,27 +50,23 @@ for i in range(TimesToRun):
     next_button = driver.find_element(By.XPATH, '//*[@id="collectNameNext"]/div/button/span')
     next_button.click()
 
-    time.sleep(3)
+    time.sleep(1)
 
     # 填信息
     year_select = driver.find_element(By.XPATH, '//*[@id="year"]')
     year_select.click()
-    time.sleep(3)
     year_select.send_keys("1970")
 
     month_select = driver.find_element(By.XPATH, '//*[@id="month"]')
     month_select.click()
-    time.sleep(2)
     month_select.send_keys("1")
 
     day_select = driver.find_element(By.XPATH, '//*[@id="day"]')
     day_select.click()
-    time.sleep(2)
     day_select.send_keys("1")
 
     gender_select = driver.find_element(By.XPATH, '//*[@id="gender"]')
     gender_select.click()
-    time.sleep(2)
     gender_select.send_keys("男")
     gender_select.click()
 
@@ -88,10 +84,8 @@ for i in range(TimesToRun):
 
     # 密码
     pwd = driver.find_element(By.XPATH, '//*[@id="passwd"]/div[1]/div/div[1]/input')
-    time.sleep(5)
     pwd.send_keys(c)
     confirm_pwd = driver.find_element(By.XPATH, '//*[@id="confirm-passwd"]/div[1]/div/div[1]/input')
-    time.sleep(3)
     confirm_pwd.send_keys(c)
     
     next_button = driver.find_element(By.XPATH, '//*[@id="createpasswordNext"]/div/button')
@@ -101,7 +95,6 @@ for i in range(TimesToRun):
 
     next_button = driver.find_element(By.XPATH, '//*[@id="recoverySkip"]/div/button')
     next_button.click()
-    time.sleep(1)
     next_button = driver.find_element(By.XPATH, '//*[@id="next"]/div/button')
     next_button.click()
     time.sleep(1)
